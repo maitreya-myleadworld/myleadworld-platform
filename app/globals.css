@@ -6,11 +6,10 @@
 }
 
 :root {
-  background-color: var(--color-brand-navy);
+  background-color: #020617;
 }
 
 body {
   margin: 0;
   -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
 }
