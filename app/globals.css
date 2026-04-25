@@ -1,8 +1,16 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import "tailwindcss";
+
+@theme {
+  --color-brand-navy: #020617;
+  --color-brand-cyan: #06b6d4;
+}
+
+:root {
+  background-color: var(--color-brand-navy);
+}
 
 body {
-  background-color: #020617; /* Navy Blue */
-  color: white;
+  margin: 0;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
