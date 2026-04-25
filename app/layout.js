@@ -1,13 +1,14 @@
-import './globals.css'
+import "./globals.css";
+
 export const metadata = {
-  title: 'MyLeadWorld',
-  description: 'Your Complete Outreach Ecosystem',
-}
+  title: "MyLeadWorld | Deliverability Meets Automation",
+  description: "The unified platform for LinkedIn automation and email warmup.",
+};
 
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body>{children}</body>
+      <body className="antialiased">{children}</body>
     </html>
-  )
+  );
 }
