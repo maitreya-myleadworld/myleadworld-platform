@@ -1,3 +1,4 @@
+import './globals.css'
 export const metadata = {
   title: 'MyLeadWorld',
   description: 'Your Complete Outreach Ecosystem',
