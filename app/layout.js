@@ -1,8 +1,8 @@
 import "./globals.css";
 
 export const metadata = {
-  title: "MyLeadWorld | Live Platform",
-  description: "Unified B2B Outreach Ecosystem",
+  title: "MyLeadWorld | Unified Outreach Platform",
+  description: "B2B LinkedIn Automation and AI Warmup Ecosystem",
 };
 
 export default function RootLayout({ children }) {
