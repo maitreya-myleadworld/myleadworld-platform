@@ -2,7 +2,7 @@
 
 import React, { useState, useEffect } from 'react';
 import { createClient } from '@supabase/supabase-js';
-import { Zap, ArrowRight, Linkedin, Brain, Flame, LogOut, ChevronRight } from 'lucide-react';
+import { Zap, ArrowRight, Linkedin, Brain, Flame, LogOut } from 'lucide-react';
 
 const supabaseUrl = process.env.NEXT_PUBLIC_SUPABASE_URL;
 const supabaseAnonKey = process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY;
@@ -36,16 +36,16 @@ export default function App() {
     <div className="min-h-screen bg-[#020617] text-slate-200">
       <nav className="fixed top-0 w-full z-50 bg-[#020617]/80 backdrop-blur-md border-b border-slate-800 py-4 px-8 flex justify-between items-center">
         <Logo />
-        <button onClick={() => setView('dashboard')} className="bg-white text-black px-6 py-2 rounded-full font-bold hover:bg-cyan-400 transition-all shadow-xl active:scale-95">Launch Console</button>
+        <button onClick={() => setView('dashboard')} className="bg-white text-black px-6 py-2 rounded-full font-bold hover:bg-cyan-400 transition-all shadow-xl">Launch Console</button>
       </nav>
-      <main className="pt-40 pb-20 px-6 text-center">
+      <main className="pt-40 text-center px-6">
         <div className="max-w-4xl mx-auto">
           <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-slate-800/50 border border-slate-700 mb-6">
             <span className="flex h-2 w-2 rounded-full bg-cyan-400 animate-pulse" />
-            <span className="text-xs font-semibold text-slate-300 uppercase tracking-widest">v1.2 Stable Build</span>
+            <span className="text-xs font-semibold text-slate-300 uppercase tracking-widest">v1.3 Production Stable</span>
           </div>
           <h1 className="text-6xl md:text-8xl font-black text-white mb-8 leading-tight">Outreach That <br/><span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-blue-600 italic">Hits the Inbox.</span></h1>
-          <p className="text-xl text-slate-400 mb-10 max-w-2xl mx-auto">Multichannel ecosystem for LinkedIn scraping and email warmup.</p>
+          <p className="text-xl text-slate-400 mb-10 max-w-2xl mx-auto">The unified B2B ecosystem for LinkedIn scraping and email warmup.</p>
           <button onClick={() => setView('dashboard')} className="bg-cyan-500 text-black px-12 py-5 rounded-2xl font-black text-xl flex items-center gap-2 mx-auto hover:shadow-cyan-500/40 hover:shadow-2xl transition-all active:scale-95">Start Prospecting <ArrowRight /></button>
         </div>
       </main>
@@ -54,13 +54,11 @@ export default function App() {
 
   return (
     <div className="min-h-screen bg-[#020617] text-slate-200 flex">
-      <aside className="w-64 border-r border-slate-800 p-6 flex flex-col gap-8 hidden lg:flex shrink-0">
+      <aside className="w-64 border-r border-slate-800 p-6 flex flex-col gap-8 hidden lg:flex">
         <Logo />
         <nav className="space-y-1">
           {['Smart Inbox', 'Lead List', 'Email Warmup'].map((item) => (
-            <button key={item} onClick={() => setActiveTab(item)} className={`w-full text-left px-4 py-2.5 rounded-xl text-sm font-semibold transition-all ${activeTab === item ? 'bg-cyan-500/10 text-cyan-400 border border-cyan-500/20' : 'text-slate-500 hover:text-white'}`}>
-              {item}
-            </button>
+            <button key={item} onClick={() => setActiveTab(item)} className={`w-full text-left px-4 py-2.5 rounded-xl text-sm font-semibold transition-all ${activeTab === item ? 'bg-cyan-500/10 text-cyan-400' : 'text-slate-500 hover:text-white'}`}>{item}</button>
           ))}
         </nav>
       </aside>
@@ -69,7 +67,7 @@ export default function App() {
           <h2 className="text-3xl font-black text-white uppercase tracking-tight">{activeTab}</h2>
           <button onClick={() => setView('landing')} className="text-slate-500 hover:text-white flex items-center gap-2 font-bold transition-colors"><LogOut size={18}/> Exit</button>
         </header>
-        <div className="bg-slate-900 border border-slate-800 rounded-3xl p-20 text-center italic text-slate-500">Dashboard live. Data syncing is active.</div>
+        <div className="bg-slate-900 border border-slate-800 rounded-3xl p-20 text-center italic text-slate-500">Dashboard module active. Syncing with MyLeadWorld extension...</div>
       </main>
     </div>
   );
