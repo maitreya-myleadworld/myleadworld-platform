@@ -1,15 +1,13 @@
 @import "tailwindcss";
 
-@theme {
-  --color-brand-navy: #020617;
-  --color-brand-cyan: #06b6d4;
-}
-
 :root {
-  background-color: #020617;
+  --background: #020617;
+  --foreground: #f8fafc;
 }
 
 body {
+  background: var(--background);
+  color: var(--foreground);
   margin: 0;
   -webkit-font-smoothing: antialiased;
 }
