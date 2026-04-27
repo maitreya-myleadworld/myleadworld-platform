@@ -1,14 +1,14 @@
 import "./globals.css";
 
 export const metadata = {
-  title: "MyLeadWorld | Unified Outreach Ecosystem",
-  description: "LinkedIn Automation & AI Warmup Platform",
+  title: "MyLeadWorld | Live Platform",
+  description: "Unified Outreach Ecosystem",
 };
 
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body className="antialiased bg-[#020617]">{children}</body>
+      <body style={{ margin: 0, backgroundColor: '#020617' }}>{children}</body>
     </html>
   );
 }
