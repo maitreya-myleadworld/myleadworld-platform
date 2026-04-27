@@ -2,7 +2,7 @@ import "./globals.css";
 
 export const metadata = {
   title: "MyLeadWorld | Live Platform",
-  description: "Unified Outreach Ecosystem",
+  description: "Unified B2B Outreach Ecosystem",
 };
 
 export default function RootLayout({ children }) {
